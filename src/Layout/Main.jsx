@@ -1,16 +1,16 @@
-import React, { createContext } from 'react';
-import { Outlet, useLoaderData } from 'react-router-dom';
-import Header from '../Components/Header';
+import React, { createContext } from "react";
+import { Outlet, useLoaderData } from "react-router-dom";
+import Header from "../Components/Header";
 
-export const teacherContext = createContext()
+export const CoursesContext = createContext();
 
 const Main = () => {
- const teachers = useLoaderData();
+  const courses = useLoaderData();
   return (
-    <teacherContext.Provider value={teachers}>
+    <CoursesContext.Provider value={courses}>
       <Header></Header>
       <Outlet></Outlet>
-    </teacherContext.Provider>
+    </CoursesContext.Provider>
   );
 };
 

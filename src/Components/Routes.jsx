@@ -5,32 +5,29 @@ import Blog from "./Blog";
 import Courses from "./Courses";
 import Stats from "./Stats";
 
-
 export const router = createBrowserRouter([
   {
-    path:'/',
+    path: "/",
     element: <Main></Main>,
-    // loader:() => fetch('teachers.json'),
-    children : [
-      {path:'/',
-       element:<Courses></Courses> 
+    loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
+    children: [
+      { path: "/", element: <Courses></Courses> },
+      {
+        path: "courses",
+        element: <Courses></Courses>,
       },
       {
-        path:'courses',
-        element:<Courses></Courses>
+        path: "stats",
+        element: <Stats></Stats>,
       },
       {
-        path:'stats',
-        element:<Stats></Stats>
+        path: "blog",
+        element: <Blog></Blog>,
       },
       {
-        path:'blog',
-        element:<Blog></Blog>
+        path: "about",
+        element: <About></About>,
       },
-      {
-        path:'about',
-        element:<About></About>
-      }
-    ]
-  }
-])
+    ],
+  },
+]);
