@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 const Blog = () => {
   return (
-    <div>
-      <h1 className="text-4xl text-blue-500 font-semibold text-center mt-4 mb-4">
+    <div className="p-3">
+      <h1 className="mt-12 text-xl lg:text-4xl text-blue-500 font-semibold text-center mt-4 mb-4">
         Questions
       </h1>
       <div>

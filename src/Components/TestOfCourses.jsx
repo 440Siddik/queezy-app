@@ -4,7 +4,6 @@ import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const TestOfCourses = ({ ts }) => {
-  // console.log(ts);
   let correctAnswers;
   const handleEyeBtn = (correctAnswer) => {
     correctAnswers = `Ans is............${correctAnswer}`;
@@ -17,9 +16,9 @@ const TestOfCourses = ({ ts }) => {
       toast.error("Sorry This is Incorrect");
     }
   };
-  const { options, question, correctAnswer, id } = ts;
+  const { options, question, correctAnswer } = ts;
   return (
-    <div className="border border-red-900 mt-4 h-[440px] p-3 rounded-md ml-2 mr-2">
+    <div className="border border-red-900 mt-4 h-[600px] lg:h-[440px] p-3 rounded-md ml-2 mr-2">
       <div className="flex justify-between">
         <h2 className="text-lg font-semibold text-fuchsia-600">
           Question : {question}
@@ -30,7 +29,7 @@ const TestOfCourses = ({ ts }) => {
           icon={faEye}
         ></FontAwesomeIcon>
       </div>
-      <div className="grid grid-cols-2 gap-4 mt-[50px]">
+      <div className="grid lg:grid-cols-2 gap-4 mt-[50px]">
         <div className="bg-slate-300 border border-slate-700 h-[80px] flex items-center rounded mt-2">
           <input
             onClick={() => handleOption(options[0], ts)}

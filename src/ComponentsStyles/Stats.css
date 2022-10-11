@@ -1,0 +1,19 @@
+
+@media only screen and (max-width: 390px) {
+.cus-css{
+  width: 370px;
+  padding: 0;
+  margin: 0;
+  height: 300px;
+}
+}
+@media only screen and (min-width: 391px) and (max-width: 600px) {
+.cus-css{
+  width: 590px;
+}
+}
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+.cus-css{
+  width: 990px;
+}
+}

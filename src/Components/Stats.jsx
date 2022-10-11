@@ -1,5 +1,6 @@
 import React from 'react';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis } from "recharts";
+import '../ComponentsStyles/Stats.css'
 const Stats = () => {
   const data = [
     {
@@ -28,8 +29,8 @@ const Stats = () => {
     },
   ];
   return (
-    <div className='flex justify-center mt-11'>
-      <LineChart width={600} height={300} data={data}>
+    <div className='mx-auto w-full mt-14 lg:flex justify-center mt-12'>
+      <LineChart className='cus-css' width={600} height={300} data={data}>
         <Line type="monotone" dataKey="total" stroke="#8884d8" />
         <CartesianGrid stroke="#ccc" />
         <XAxis dataKey="name" />

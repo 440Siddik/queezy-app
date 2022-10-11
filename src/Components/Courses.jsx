@@ -9,13 +9,17 @@ const Courses = () => {
   return (
     <div className="mt-2">
       <div>
-        <h2 className="text-3xl mb-4 text-center text-lime-600 font-bold">
+        <h2 className=" hidden lg:text-3xl mb-4 text-center text-lime-600 font-bold">
           We quiz therefore we are.
         </h2>
       </div>
-      <img className="mx-auto w-[70%] h-[300px]" src={banner} alt="" />
+      <img
+        className="mt-14 mx-auto rounded w-[90%] border-2 border-red-400 lg:mx-auto w-[70%] h-[300px] rounded"
+        src={banner}
+        alt=""
+      />
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-4">
         {courses.map((course) => (
           <Course key={course.id} course={course}></Course>
         ))}

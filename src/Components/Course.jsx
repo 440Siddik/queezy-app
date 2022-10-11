@@ -1,6 +1,5 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import "../ComponentsStyles/Course.css";
 const Course = ({ course }) => {
   const { id, name, logo } = course;
   const navigate = useNavigate();
@@ -8,7 +7,7 @@ const Course = ({ course }) => {
     navigate(`/course/${id}`);
   };
   return (
-    <div className="border-rose-800 border-2 w-[500px] h-[400px] mx-auto p-4 rounded-md mt-6">
+    <div className="border-rose-800 border-2 w-[500px] h-[400px] mx-auto p-4 rounded-md mt-6 custom">
       <img
         className="h-[300px] w-[500px] bg-pink-200 border-2 border-orange-400 rounded"
         src={logo}
