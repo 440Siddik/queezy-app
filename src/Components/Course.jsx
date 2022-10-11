@@ -1,7 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Course = ({ course }) => {
   const { id, name, logo } = course;
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate(`/course/${id}`);
+  };
   return (
     <div className="border-rose-800 border-2 w-[500px] h-[400px] mx-auto p-4 rounded-md mt-6">
       <img
@@ -11,7 +16,10 @@ const Course = ({ course }) => {
       />
       <div className="flex justify-between items-center mt-4">
         <h2 className="text-xl font-semibold">{name}</h2>
-        <button className="bg-red-300 px-4 rounded-md py-2 text-white font-semibold">
+        <button
+          onClick={handleNavigate}
+          className="bg-red-300 px-4 rounded-md py-2 text-white font-semibold"
+        >
           Start Test
         </button>
       </div>
