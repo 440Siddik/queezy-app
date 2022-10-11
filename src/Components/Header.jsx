@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -7,16 +7,37 @@ const Header = () => {
       <div>
         <h4 className="text-2xl font-bold text-red-500">Quizeey</h4>
       </div>
-      <nav className="text-lime-600 font-semibold text-xl">
-        <Link className="mr-5" to={"/courses"}>
+      <nav className="font-semibold text-xl">
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "text-blue-700 mr-5 bg-slate-50 p-2 rounded"
+              : "text-lime-600 mr-5"
+          }
+          to={"/courses"}
+        >
           Courses
-        </Link>
-        <Link className="mr-5" to={"/stats"}>
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "text-blue-700 mr-5 bg-slate-50 p-2 rounded"
+              : "text-lime-600 mr-5"
+          }
+          to={"/stats"}
+        >
           Stats
-        </Link>
-        <Link className="mr-5" to={"/blog"}>
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "text-blue-700 mr-5 bg-slate-50 p-2 rounded"
+              : "text-lime-600 mr-5"
+          }
+          to={"/blog"}
+        >
           Blog
-        </Link>
+        </NavLink>
       </nav>
     </div>
   );
