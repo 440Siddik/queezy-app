@@ -17,9 +17,6 @@ const Header = () => {
         <Link className="mr-5" to={"/blog"}>
           Blog
         </Link>
-        <Link className="mr-5" to={"/about"}>
-          About Us
-        </Link>
       </nav>
     </div>
   );
