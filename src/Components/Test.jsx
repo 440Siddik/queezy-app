@@ -5,7 +5,7 @@ import TestOfCourses from "./TestOfCourses";
 const Test = () => {
   const testData = useLoaderData();
   const test = testData.data.questions;
-
+  // console.log(test);
   return (
     <div>
       
